@@ -1,32 +1,26 @@
 import {
   CloudIcon,
   BoltIcon,
-  ShieldCheckIcon,
   RocketLaunchIcon,
-  EnvelopeIcon,
   CommandLineIcon,
   SunIcon,
   UserGroupIcon,
+  CodeBracketIcon,
+  CubeIcon,
 } from "@heroicons/react/24/outline";
 
 const features = [
-  {
-    name: "Authentication Ready",
-    description:
-      "Complete authentication system with email/password sign in, sign up, forgot password flow, and session management using Lucia Auth.",
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: "Database & Email",
-    description:
-      "Drizzle ORM with Cloudflare D1 for the database, and React Email with Resend for beautiful email templates.",
-    icon: EnvelopeIcon,
-  },
   {
     name: "Modern Stack",
     description:
       "Next.js 15 App Router with React Server Components, Server Actions, and Edge Runtime for optimal performance.",
     icon: BoltIcon,
+  },
+  {
+    name: "Database Ready",
+    description:
+      "Drizzle ORM with Cloudflare D1 for the database, providing type-safe database operations.",
+    icon: CubeIcon,
   },
   {
     name: "Beautiful UI",
@@ -43,7 +37,7 @@ const features = [
   {
     name: "Developer Experience",
     description:
-      "GitHub Actions for deployment, comprehensive documentation, and TypeScript for type safety.",
+      "GitHub Actions for deployment, comprehensive documentation, and TypeScript for type safety throughout.",
     icon: CommandLineIcon,
   },
   {
@@ -51,6 +45,12 @@ const features = [
     description:
       "Built-in form validation with Zod and React Hook Form for a smooth user experience.",
     icon: RocketLaunchIcon,
+  },
+  {
+    name: "Clean Architecture",
+    description:
+      "Well-organized codebase with clear separation of concerns, making it easy to understand and maintain.",
+    icon: CodeBracketIcon,
   },
   {
     name: "Team Ready",
@@ -69,11 +69,11 @@ export function Features() {
             Production Ready
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-            Everything you need to build a SaaS
+            Everything you need to build modern apps
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Start with a complete foundation. All the essential features are built-in,
-            so you can focus on what makes your SaaS unique.
+            Start with a clean foundation. All the essential features are built-in,
+            so you can focus on building your unique application.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

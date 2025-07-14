@@ -19,20 +19,17 @@ const faqs = [
     question: "What features are included?",
     answer: (
       <>
-        The template includes a comprehensive set of features:
+        The template includes a clean foundation with essential features:
         <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li>Authentication with email/password and forgot password flow</li>
           <li>Database integration with Drizzle ORM and Cloudflare D1</li>
-          <li>Email service powered by React Email and Resend</li>
           <li>Modern UI components from Shadcn UI and Tailwind CSS</li>
           <li>Form validations and error handling</li>
           <li>Dark mode support</li>
           <li>Responsive design</li>
           <li>TypeScript throughout the codebase</li>
           <li>Automated deployments with GitHub Actions</li>
-          <li>Captcha integration with Turnstile</li>
           <li>SEO optimization with Next.js</li>
-          <li>And countless other features...</li>
+          <li>Clean, maintainable architecture</li>
         </ul>
       </>
     ),
@@ -47,10 +44,8 @@ const faqs = [
           <li>TypeScript for type safety</li>
           <li>Tailwind CSS and Shadcn UI for styling</li>
           <li>DrizzleORM with Cloudflare D1 for database</li>
-          <li>Lucia Auth for authentication</li>
           <li>Cloudflare Workers for serverless deployment</li>
-          <li>Cloudflare KV for session storage</li>
-          <li>React Email for beautiful email templates</li>
+          <li>React Hook Form and Zod for form handling</li>
         </ul>
       </>
     ),
@@ -61,10 +56,9 @@ const faqs = [
       <>
         <p>Deployment is automated with GitHub Actions. You&apos;ll need to:</p>
         <ol className="list-decimal pl-6 mt-2 space-y-1">
-          <li>Create Cloudflare D1 and KV namespaces</li>
-          <li>Set up Resend for email service</li>
-          <li>Configure Turnstile for captcha</li>
+          <li>Create Cloudflare D1 database</li>
           <li>Add your Cloudflare API token to GitHub secrets</li>
+          <li>Configure your wrangler.toml file</li>
           <li>Push to the main branch</li>
         </ol>
         <p className="mt-2">The deployment process is fully documented in the <a href={`${GITHUB_REPO_URL}/blob/main/README.md`} target="_blank">GitHub repository</a>.</p>
@@ -81,42 +75,16 @@ const faqs = [
     ),
   },
   {
-    question: "What are the upcoming features?",
-    answer: (
-      <>
-        <p>We have an exciting roadmap ahead! Planned features include:</p>
-        <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li>Multi-language support (i18n)</li>
-          <li>Billing and payment processing</li>
-          <li>Admin dashboard</li>
-          <li>Email verification on sign up</li>
-          <li>Notifications system</li>
-          <li>Webhooks support</li>
-          <li>Team collaboration features</li>
-          <li>Real-time updates</li>
-          <li>Analytics dashboard</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    question: "Can I preview the email templates?",
-    answer: (
-      <>
-        Yes! Run <code>pnpm email:dev</code> and open <a href="http://localhost:3001" target="_blank">http://localhost:3001</a> to preview and edit the email templates. They&apos;re built with React Email for a great developer experience.
-      </>
-    ),
-  },
-  {
     question: "How do I customize the template?",
     answer: (
       <>
         <p>Before deploying to production, you should:</p>
         <ul className="list-disc pl-6 mt-2 space-y-1">
           <li>Update project details in <code>src/constants.ts</code></li>
-          <li>Customize the documentation in <code>./cursor-docs</code></li>
           <li>Modify the footer in <code>src/components/footer.tsx</code></li>
-          <li>Optionally update the color palette in <code>src/app/globals.css</code></li>
+          <li>Customize the color palette in <code>src/app/globals.css</code></li>
+          <li>Add your own pages and components</li>
+          <li>Configure your database schema in <code>src/db/schema.ts</code></li>
         </ul>
       </>
     ),

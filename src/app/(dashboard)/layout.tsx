@@ -1,24 +1,9 @@
-import { AppSidebar } from "@/components/app-sidebar"
-import { getSessionFromCookie } from "@/utils/auth"
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/components/ui/sidebar"
-import { redirect } from "next/navigation"
-
-export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
-  const session = await getSessionFromCookie()
-
-  if (!session) {
-    return redirect('/')
-  }
-
+export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
-    <SidebarProvider>
-      <AppSidebar />
-      <SidebarInset>
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto p-4">
         {children}
-      </SidebarInset>
-    </SidebarProvider>
+      </div>
+    </div>
   )
 }
