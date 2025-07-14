@@ -1,117 +1,67 @@
-# Cloudflare Workers SaaS Template
+# Cloudflare Workers Next.js Template
 
 [![.github/workflows/deploy.yml](https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template/actions/workflows/deploy.yml)
 
-# [Live Demo](https://nextjs-saas-template.agenticdev.agency/sign-up)
 # [Github Repo](https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template)
 
-This is a SaaS template for Cloudflare Workers. It uses the [OpenNext](https://opennext.js.org/cloudflare) framework to build a SaaS application.
-
-Have a look at the [project plan](./cursor-docs/project-plan.md) to get an overview of the project.
+This is a clean, modern Next.js template for Cloudflare Workers. It uses the [OpenNext](https://opennext.js.org/cloudflare) framework for deployment.
 
 > [!TIP]
 > This template is brought to you by 👉 [AgenticDev](https://agenticdev.agency/?ref=github-readme-nextjs-template) 👈 - where we help businesses automate operations and boost productivity through custom AI implementations. Just like this open-source project demonstrates technical excellence, we deliver:
 >
 > - Process automation with LLM-powered workflows
 > - AI strategy consulting for sustainable scaling
-> - Custom SaaS development using cutting-edge stacks
+> - Custom application development using cutting-edge stacks
 >
-> Hundrets of developers already trust our codebase - Just Imagine what we could build for your business.
+> Hundreds of developers already trust our codebase - Just Imagine what we could build for your business.
 
 # Supported Features:
 
-- 🔐 Authentication with Lucia Auth
-  - 📧 Email/Password Sign In
-  - 📝 Email/Password Sign Up
-  - 🔑 WebAuthn/Passkey Authentication
-  - 🌐 Google OAuth/SSO Integration
-  - 🔄 Forgot Password Flow
-  - 🔒 Change Password
-  - ✉️ Email Verification
-  - 🗝️ Session Management with Cloudflare KV
-  - 🤖 Turnstile Captcha Integration
-  - ⚡ Rate Limiting for Auth Endpoints
-  - 🛡️ Protected Routes and Layouts
-  - 📋 Session Listing and Management
-  - 🔒 Anti-Disposable Email Protection
-- 💾 Database with Drizzle and Cloudflare D1
+- 💾 **Database with Drizzle and Cloudflare D1**
   - 🏗️ Type-safe Database Operations
   - 🔄 Automatic Migration Generation
   - 💻 SQLite for Local Development
   - ⚡ Efficient Data Fetching
   - 🔍 Type-safe Queries
-- 📨 Email Service with React Email and Resend or Brevo
-  - 🎨 Beautiful Email Templates
-  - 👀 Email Preview Mode
-  - 🔧 Local Email Development Server
-  - 📬 Transactional Emails
-  - ✉️ Email Verification Flow
-  - 📱 Responsive Email Templates
-- 🚀 Deployment with Github Actions
+- 🚀 **Deployment with Github Actions**
   - ⚙️ Automatic Deployments
   - 🔐 Environment Variables Management
   - 📦 Database Migrations
   - 🔄 Comprehensive CI/CD Pipeline
   - 🧹 Cache Purging
   - ✅ Type Checking
-- 🎨 Modern UI
+- 🎨 **Modern UI**
   - 🎨 Tailwind CSS
   - 🧩 Shadcn UI Components
   - 🌓 Dark/Light Mode
   - 📱 Responsive Design
   - ⚡ Loading States and Animations
   - 🔔 Toast Notifications
-  - ⚙️ Settings Dashboard
   - 🏠 Landing Page
-  - ✨ Beautiful Email Templates
-  - 👤 Profile Settings Page
-  - 🎯 Form Validation States
-- 💳 Credit Billing System
-  - 💰 Credit-based Pricing Model
-  - 🔄 Monthly Credit Refresh
-  - 📊 Credit Usage Tracking
-  - 💳 Stripe Payment Integration
-  - 📜 Transaction History
-  - 📦 Credit Package Management
-  - 💸 Pay-as-you-go Model
-  - 📈 Usage Analytics
-- 👑 Admin Dashboard
-  - 👥 User Management
-- ✨ Validations with Zod and React Hook Form
+  - 📋 Dashboard Example
+- ✨ **Validations with Zod and React Hook Form**
   - 🛡️ Type-safe Form Validations
   - 🔒 Server-side Validations
   - 🔍 Client-side Validations
   - 🧹 Input Sanitization
   - ⚡ Real-time Validation
   - 🔄 Form State Management
-- 👨‍💻 Developer Experience
+- 👨‍💻 **Developer Experience**
   - 🧪 Local Development Setup
   - 📘 TypeScript Support
   - 🔍 ESLint Configuration
   - ✨ Prettier Configuration
   - 🔐 Type-safe Environment Variables
   - 🏗️ Cloudflare Types Generation
-  - 🤖 AI-powered Development with Cursor
   - 📚 Comprehensive Documentation
   - 📐 Project Structure Best Practices
-- ⚡ Edge Computing
+- ⚡ **Edge Computing**
   - 🌍 Global Deployment with Cloudflare Workers
   - 🚀 Zero Cold Starts
   - 💨 Edge Caching
   - ⚛️ React Server Components
   - 🖥️ Server-side Rendering
   - 💾 Edge Database with D1
-  - 🗄️ Session Storage with KV
-  - ⚡ API Rate Limiting
-- 🏢 Multi-tenancy Support
-  - 👥 Organization Management
-  - 👤 User Roles and Permissions
-  - 🔍 Tenant Isolation
-  - 🔄 Resource Sharing Controls
-  - 📊 Per-tenant Analytics
-  - 🔐 Tenant-specific Configurations
-  - 💼 Team Collaboration Features
-
 ## Planned features (TODO):
 
 - [ ] Update Meta SEO tags 🔍
@@ -125,16 +75,15 @@ Have a look at the [project plan](./cursor-docs/project-plan.md) to get an overv
 
 # Running it locally
 
-1. `pnpm install`
-2.  Copy `.dev.vars.example` to `.dev.vars` and fill in the values.
-3.  Copy `.env.example` to `.env` and fill in the values.
-4. `pnpm db:migrate:dev` - Creates a local SQLite database and applies migrations
-5. `pnpm dev`
-6.  Open http://localhost:3000
+1. `npm install`
+2. Copy `.env.example` to `.env.local` and fill in the values.
+3. `npm run db:migrate:dev` - Creates a local SQLite database and applies migrations
+4. `npm run dev`
+5. Open http://localhost:3000
 
 ## Changes to wrangler.jsonc
 
-After making a change to wrangler.jsonc, you need to run `pnpm cf-typegen` to generate the new types.
+After making a change to wrangler.jsonc, you need to run `npm run cf-typegen` to generate the new types.
 
 ## Things to change and customize before deploying to production
 1. Go to `src/constants.ts` and update it with your project details
@@ -164,10 +113,3 @@ After making a change to wrangler.jsonc, you need to run `pnpm cf-typegen` to ge
 8. Add the Cloudflare account id to the Github repository variables as `CLOUDFLARE_ACCOUNT_ID`
 9. Optional: If you want clear the CDN cache on deploy, add `CLOUDFLARE_ZONE_ID` to the Github repository variables for the zone id of your domain. This is the zone id of your domain, not the account id.
 10. Push to the main branch
-
-## Email templates
-If you want to preview and edit the email templates you can:
-1. `pnpm email:dev`
-2. Open http://localhost:3001
-3. Edit the email templates in the `src/react-email` folder
-4. For inspiration you can checkout https://react.email/templates
