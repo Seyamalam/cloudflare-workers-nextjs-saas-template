@@ -1,9 +1,3 @@
-import type { KVSession } from "./utils/kv-session";
-
-export type SessionValidationResult =
-  | KVSession
-  | null;
-
 export interface ParsedUserAgent {
   ua: string;
   browser: {
@@ -24,12 +18,4 @@ export interface ParsedUserAgent {
     name?: string;
     version?: string;
   };
-}
-
-export interface SessionWithMeta extends KVSession {
-  isCurrentSession: boolean;
-  expiration?: Date;
-  createdAt: number;
-  userAgent?: string | null;
-  parsedUserAgent?: ParsedUserAgent;
 }
